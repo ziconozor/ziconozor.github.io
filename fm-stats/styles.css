@@ -20,11 +20,12 @@ body {
     border-radius: 10px;
 }
 
-.tile-image img {
+.tile-image {
+
+    background: linear-gradient(to top, rgba(230, 136, 221, 0.4), rgba(153, 7, 250, 0.4)), url(images/image-header-desktop.jpg);
+    no-repeat top center;
     border-radius: 0px 10px 10px 0px;
-    vertical-align: top;
-    object-fit: cover;
-    opacity: 0.4;
+    width: 540px;
 }
 
 .tile-info {
