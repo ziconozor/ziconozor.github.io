@@ -32,16 +32,20 @@ body {
 }
 
 .product-title {
-    letter-spacing: 3px;
+    letter-spacing: 6px;
+    font-size: 12px;
     padding-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .product-name {
-    font-weight: 800;
-    font-size: 28px;
+    font-weight: 900;
+    font-size: 34px;
     margin-bottom: 30px;
-    width: 80%;
-    line-height: 30px;
+    width: 90%;
+    line-height: 35px;
+    font-family: 'Fraunces', sans-serif;
+    color: hsl(212, 21%, 14%);
 }
 
 .product-bio {
@@ -49,6 +53,8 @@ body {
     padding-bottom: 20px;
     line-height: 25px;
     width: 90%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
 }
 
 .price-box {
@@ -60,7 +66,8 @@ body {
 .price {
     color: hsl(158, 36%, 37%);
     font-size: 32px;
-    font-weight: 800;
+    font-weight: 900;
+    font-family: 'Fraunces', sans-serif;
 }
 
 .former-price {
@@ -72,10 +79,14 @@ body {
 .cart-button button {
     background-color: hsl(158, 36%, 37%);
     color: hsl(0, 0%, 100%);
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
     margin-top: 20px;
     border-radius: 10px;
-    padding: 10px 75px;
+    padding: 15px 70px;
     border: none;
+    font-family: 'Montserrat', sans-serif;
+
 }
+
+.cart-button img {}
