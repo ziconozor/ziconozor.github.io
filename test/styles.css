@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.box {
+    height: 50px;
+    width: 50px;
+    border-style: solid;
+    border-color: red;
+}
+
+.box1 {
+    height: 500px;
+    width: 70%;
+    border-style: solid;
+    border-color: green;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
