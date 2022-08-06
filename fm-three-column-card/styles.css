@@ -19,6 +19,7 @@ body {
 
 .orange {
     background-color: hsl(31, 77%, 52%);
+    border-radius: 10px 0px 0px 10px;
 }
 
 .orange-text a {
@@ -35,6 +36,7 @@ body {
 
 .dark-green {
     background-color: hsl(179, 100%, 13%);
+    border-radius: 0px 10px 10px 0px;
 }
 
 .dark-green-text a {
