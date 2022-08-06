@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: hsl(0, 0%, 95%);
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 850px;
+}
+
+.card {
+    display: flex;
+    width: 900px;
+    height: 500px;
+}
+
+.orange {
+    background-color: hsl(31, 77%, 52%);
+}
+
+.orange-text a {
+    color: hsl(31, 77%, 52%);
+}
+
+.light-green {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.light-green-text a {
+    color: hsl(184, 100%, 22%);
+}
+
+.dark-green {
+    background-color: hsl(179, 100%, 13%);
+}
+
+.dark-green-text a {
+    color: hsl(179, 100%, 13%);
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.column-logo {
+    margin: 40px 0px 0px 40px;
+}
+
+.column-title {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-weight: 700;
+    color: hsl(0, 0%, 95%);
+    font-size: 38px;
+    text-transform: capitalize;
+    margin: 40px 0px 0px 40px;
+}
+
+.column-text {
+    margin-top: 25px;
+    margin-left: 40px;
+    margin-right: 45px;
+    color: hsla(0, 0%, 100%, 0.75);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 15px;
+    line-height: 25px;
+}
+
+.learn-more {
+    margin-top: 100px;
+    margin-left: 40px;
+}
+
+.learn-more button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+}
+
+.learn-more a {
+    text-decoration: none;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+}
