@@ -108,8 +108,11 @@ body {
 .mid-section-1 {
     display: flex;
     justify-content: center;
-    width: 100%;
     gap: 180px;
+}
+
+.img-container {
+    margin-left: -150px;
 }
 
 .mid-section-1-left {
