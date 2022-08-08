@@ -1,0 +1,130 @@
+* {
+    font-family: 'Karla', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: hsl(204, 43%, 93%);
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    margin-top: 150px;
+}
+
+.card {
+    width: 630px;
+    box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.07);
+    border-radius: 10px;
+}
+
+.top {
+    background-color: white;
+    padding: 40px 50px 20px 40px;
+    border-radius: 10px 10px 0px 0px;
+
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 700;
+    color: hsl(179, 62%, 43%);
+}
+
+.subtitle,
+.subtitle-bottom {
+    font-weight: 700;
+    font-size: 18px;
+    color: hsl(204, 43%, 93%);
+}
+
+.green {
+    color: hsl(71, 73%, 54%);
+    margin-top: 25px;
+}
+
+.subtext {
+    color: hsl(218, 22%, 67%);
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.bottom {
+    display: flex;
+    color: hsl(204, 43%, 93%);
+}
+
+.bottom-right,
+.bottom-left {
+    background-color: hsl(179, 62%, 43%);
+    height: 260px;
+    width: 315px;
+}
+
+.subtitle-bottom {
+    margin-top: 38px;
+    margin-left: 35px;
+
+}
+
+.price {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 35px;
+}
+
+.amount {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.month {
+    opacity: 0.6;
+    font-size: 16px;
+}
+
+.price-subtext {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: 35px;
+    margin-bottom: 30px;
+}
+
+.signup-button {
+    text-align: center;
+}
+
+.signup-button button {
+    padding: 14px 88px;
+    color: white;
+    background-color: hsl(71, 73%, 54%);
+    box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.07);
+
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+
+.bottom-left {
+    border-radius: 0px 0px 0px 10px;
+}
+
+.bottom-right {
+    border-radius: 0px 0px 10px 0px;
+    opacity: 0.8;
+}
+
+.reasons-list ul {
+    list-style: none;
+
+    opacity: 0.8;
+}
