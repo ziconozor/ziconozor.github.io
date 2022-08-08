@@ -2,17 +2,27 @@
     font-family: 'Karla', sans-serif;
 }
 
+html,
+body {
+    height: 100%;
+
+}
+
 body {
     margin: 0;
     padding: 0;
     background-color: hsl(204, 43%, 93%);
     display: flex;
+    align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
-.content {
-    margin-top: 100px;
+.footer {
+    text-align: center;
 }
+
+.content {}
 
 .card {
     width: 630px;
