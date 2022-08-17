@@ -4,20 +4,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="styles.css">
   <script type="text/javascript" src="script.js" delay></script>
   <title>TOP - Rock Paper Scissors</title>
 </head>
 
 <body>
   <div id="container">
+    <h1>Rock Paper Scissors</h1>
+    <h3>The ugliest thing you've ever seen</h3>
     <div class="buttons">
-      <button data="rock" class="selection-btn">Rock</button>
-      <button data="paper" class="selection-btn">Paper</button>
-      <button data="scissors" class="selection-btn">Scissors</button>
+      <button id="rock" class="selection-btn">Rock</button>
+      <button id="paper" class="selection-btn">Paper</button>
+      <button id="scissors" class="selection-btn">Scissors</button>
     </div>
     <div class="score">
-      <div id="round-result" class="round-result"></div>
       <div id="total-score" class="total-score">Player: 0 | Computer: 0</div>
+      <div id="round-result" class="round-result"></div>
       <div id="game-winner"></div>
     </div>
   </div>

@@ -50,24 +50,33 @@ function playRound(playerChoice, computerChoice) {
 }
 
 function setScore(winner) {
+  let game_limit = 5;
   round_result.innerText = "";
+  game_winner.innerText = "";
 
   if (winner === "Draw") {
     round_result.innerText = "Draw!";
+    round_result.style.color = "black";
     return;
   } else {
     round_result.innerText = winner + " has won the round!";
-  }
 
-  winner === "Player" ? p_score++ : c_score++;
+    if (winner === "Player") {
+      p_score++;
+      round_result.style.color = "#812E45";
+    } else if (winner === "Computer") {
+      c_score++;
+      round_result.style.color = "#2E4681";
+    }
+  }
 
   total_score.innerText = "Player: " + p_score + " | Computer: " + c_score;
 
-  if (p_score == 5) {
+  if (p_score == game_limit) {
     game_winner.innerText = "Player won the GAME!";
     p_score = 0;
     c_score = 0;
-  } else if (c_score == 5) {
+  } else if (c_score == game_limit) {
     game_winner.innerText = "Computer has won the GAME!";
     p_score = 0;
     c_score = 0;
