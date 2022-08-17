@@ -24,7 +24,7 @@ h1 {
   border-radius: 20px;
   border: 2px dashed #BC7288;
   padding: 0px 20px;
-  background-color: white;
+  background: linear-gradient(rgba(255, 255, 255, .8), rgba(255, 255, 255, .7));
 }
 
 button {
