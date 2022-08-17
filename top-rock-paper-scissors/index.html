@@ -2,13 +2,43 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="script.js" delay></script>
+  <title>TOP - Rock Paper Scissors</title>
 </head>
 
 <body>
-    <script type="text/javascript" src="script.js"></script>
+  <div id="container">
+    <div class="buttons">
+      <button data="rock" class="selection-btn">Rock</button>
+      <button data="paper" class="selection-btn">Paper</button>
+      <button data="scissors" class="selection-btn">Scissors</button>
+    </div>
+    <div class="score">
+      <div id="round-result" class="round-result"></div>
+      <div id="total-score" class="total-score">Player: 0 | Computer: 0</div>
+      <div id="game-winner"></div>
+    </div>
+  </div>
+  <script type="text/javascript">
+  let container = document.querySelector("#container");
+  let buttons = container.querySelectorAll("button");
+  let round_result = document.querySelector("#round-result");
+  let total_score = document.querySelector("#total-score");
+  let game_winner = document.querySelector("#game-winner");
+
+  let p_score = 0;
+  let c_score = 0;
+  let winner = "";
+
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      winner = playRound(button.innerText.toUpperCase(), getComputerChoice());
+      setScore(winner);
+    })
+  });
+  </script>
 </body>
 
 </html>
