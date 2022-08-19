@@ -1,5 +1,5 @@
 let drawbox = document.querySelector("#drawbox");
-let width = 500;
+let width = 450;
 drawbox.style.width = width + 'px';
 drawbox.style.height = width + 'px';
 
@@ -33,6 +33,8 @@ function createGrid(size) {
 
 function changeSize() {
   let new_size = prompt("How many squares per side?");
+  if (new_size > 100) new_size = 100;
+  else if (new_size < 1) new_size = 16;
 
   while (drawbox.firstChild) {
     drawbox.removeChild(drawbox.lastChild);
@@ -54,3 +56,6 @@ function getRandomColor() {
   }
   return color;
 }
+
+/* initial grid */
+createGrid(16);

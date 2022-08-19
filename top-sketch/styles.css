@@ -9,6 +9,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: lightgrey;
 }
 
 #drawbox {
@@ -17,7 +18,10 @@ body {
   align-items: center;
   justify-content: center;
 
-  border: 1px solid lightgrey;
+  border: 20px solid red;
+  border-radius: 10px;
+  background-color: white;
+
 }
 
 .div_row {
@@ -25,19 +29,32 @@ body {
 }
 
 .box {
+  transition: 0.1s;
+  /*
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   border: 1px dotted lightgrey;
+  */
 }
 
-.buttons {
+.buttons,
+h1,
+.footer {
   text-align: center;
 }
 
 button {
-  padding: 10px 50px;
+  padding: 10px 75px;
   font-weight: 700;
   font-size: 16px;
   margin: 10px;
+  border-radius: 20px;
+  background-color: red;
+  border: none;
+  color: whitesmoke;
+}
+
+button:hover {
+  background-color: darkred;
 }
