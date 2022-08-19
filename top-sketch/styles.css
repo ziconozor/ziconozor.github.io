@@ -17,9 +17,7 @@ body {
   align-items: center;
   justify-content: center;
 
-  width: 500px;
-  height: 500px;
-  border: 1px solid blue;
+  border: 1px solid lightgrey;
 }
 
 .div_row {
@@ -27,7 +25,19 @@ body {
 }
 
 .box {
-  border: 1px solid red;
-  height: 10px;
-  width: 10px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 1px dotted lightgrey;
+}
+
+.buttons {
+  text-align: center;
+}
+
+button {
+  padding: 10px 50px;
+  font-weight: 700;
+  font-size: 16px;
+  margin: 10px;
 }

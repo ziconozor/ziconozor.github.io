@@ -1,4 +1,8 @@
 let drawbox = document.querySelector("#drawbox");
+let width = 500;
+drawbox.style.width = width + 'px';
+drawbox.style.height = width + 'px';
+
 let div_row;
 let div;
 
@@ -15,6 +19,9 @@ function createGrid(size) {
       div = document.createElement("div");
 
       div.classList.add("box");
+
+      div.style.width = width / size + 'px';
+      div.style.height = width / size + 'px';
 
       div.addEventListener("mouseover", paintSquare);
       div_row.appendChild(div);
