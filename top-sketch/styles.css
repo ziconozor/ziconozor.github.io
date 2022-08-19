@@ -1,0 +1,33 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#drawbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 500px;
+  height: 500px;
+  border: 1px solid blue;
+}
+
+.div_row {
+  display: flex;
+}
+
+.box {
+  border: 1px solid red;
+  height: 10px;
+  width: 10px;
+}
