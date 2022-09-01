@@ -114,6 +114,7 @@ body {
   letter-spacing: 2px;
   transform: rotate(-45deg);
   font-family: 'Press Start 2P';
+  margin-top: -15px;
 }
 
 .red {
