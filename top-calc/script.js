@@ -28,7 +28,7 @@ function operate(a, b, operator) {
     case "+":
       return add(a, b);
       break;
-    case "-":
+    case "—":
       return sub(a, b);
       break;
     case "*":
@@ -103,7 +103,9 @@ function setSpecialOperatorsListeners() {
       let operator = "";
       let answer = 0;
       for (let i = 0; i < strDisplay.length + 1; i++) {
-        if ((!isNaN(strDisplay.charAt(i)) || strDisplay.charAt(i) == '.') && i != strDisplay.length) {
+        if ((!isNaN(strDisplay.charAt(i)) ||
+            (strDisplay.charAt(i) == '.' || strDisplay.charAt(i) == '-')) &&
+          i != strDisplay.length) {
           strNumber += strDisplay.charAt(i);
         } else {
           if (tempNumber == null) {
