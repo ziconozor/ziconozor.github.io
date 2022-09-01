@@ -51,8 +51,12 @@ let computed = false;
 function setNumberListener() {
   document.querySelectorAll('.digit').forEach(item => {
     item.addEventListener('click', event => {
-      let number = parseFloat(item.innerHTML);
-      strDisplay += number;
+      if (item.innerHTML == '.') {
+        strDisplay += item.innerHTML;
+      } else {
+        let number = parseFloat(item.innerHTML);
+        strDisplay += number;
+      }
       display.innerHTML = strDisplay;
     })
   })
@@ -105,7 +109,7 @@ function setSpecialOperatorsListeners() {
         } else {
           answer = operate(tempNumber,
             parseFloat(strNumber),
-            operator);
+            operator).toFixed(2);
           computed = true;
           strNumber = "";
           tempNumber = answer;
