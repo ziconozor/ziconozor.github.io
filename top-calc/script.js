@@ -95,31 +95,35 @@ function setSpecialOperatorsListeners() {
   });
 
   document.querySelector('.equal').addEventListener('click', event => {
-    let strNumber = "";
-    let tempNumber = null;
-    let operator = "";
-    let answer = 0;
-    for (let i = 0; i < strDisplay.length + 1; i++) {
-      if ((!isNaN(strDisplay.charAt(i)) || strDisplay.charAt(i) == '.') && i != strDisplay.length) {
-        strNumber += strDisplay.charAt(i);
-      } else {
-        if (tempNumber == null) {
-          tempNumber = parseFloat(strNumber);
-          strNumber = "";
+    if (isNaN(parseFloat(display.innerHTML))) {
+      console.log('nan')
+    } else {
+      let strNumber = "";
+      let tempNumber = null;
+      let operator = "";
+      let answer = 0;
+      for (let i = 0; i < strDisplay.length + 1; i++) {
+        if ((!isNaN(strDisplay.charAt(i)) || strDisplay.charAt(i) == '.') && i != strDisplay.length) {
+          strNumber += strDisplay.charAt(i);
         } else {
-          answer = operate(tempNumber,
-            parseFloat(strNumber),
-            operator).toFixed(2);
-          computed = true;
-          strNumber = "";
-          tempNumber = answer;
+          if (tempNumber == null) {
+            tempNumber = parseFloat(strNumber);
+            strNumber = "";
+          } else {
+            answer = operate(tempNumber,
+              parseFloat(strNumber),
+              operator).toFixed(2);
+            computed = true;
+            strNumber = "";
+            tempNumber = answer;
+          }
+          operator = strDisplay.charAt(i);
         }
-        operator = strDisplay.charAt(i);
       }
-    }
+      display.innerHTML = answer;
+      strDisplay = "";
 
-    display.innerHTML = answer;
-    strDisplay = "";
+    }
   });
 }
 
