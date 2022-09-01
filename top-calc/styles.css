@@ -22,7 +22,7 @@ body {
   width: 500px;
   background: #85C6D3;
   border: 5px solid #066275;
-  box-shadow: -23px 19px 0px 5px #000000;
+  box-shadow: -23px 19px 0px 5px #2D2D2D;
   display: flex;
   flex-direction: column;
 }
@@ -63,7 +63,7 @@ body {
   font-weight: 700;
   font-size: 18px;
   margin: 10px;
-  box-shadow: -8px 8px 0px 0px #000000;
+  box-shadow: -8px 8px 0px 0px #2D2D2D;
   cursor: pointer;
 }
 
@@ -73,7 +73,7 @@ body {
 
 .digit:hover,
 .operator:hover,
-.special-operator: hover {
+.special-operator:hover {
   background: #EEE7E7;
   transform: scale(0.97);
   transition: 0.08s;

@@ -43,16 +43,17 @@ function operate(a, b, operator) {
   }
 }
 
-let strDisplay = "";
 const display = document.querySelector('.display');
+let strDisplay = "";
+let currentNumber = "";
+let computed = false;
 
 function setNumberListener() {
   document.querySelectorAll('.digit').forEach(item => {
     item.addEventListener('click', event => {
       let number = parseInt(item.innerHTML);
-      strDisplay += number + " ";
+      strDisplay += number;
       display.innerHTML = strDisplay;
-      console.log(strDisplay);
     })
   })
 }
@@ -61,9 +62,23 @@ function setOperatorsListener() {
   document.querySelectorAll('.operator').forEach(item => {
     item.addEventListener('click', event => {
       let operator = item.innerHTML;
-      strDisplay += operator + " ";
+
+      // true if first operation already made
+      if (computed) {
+        strDisplay = display.innerHTML + operator;
+      } else {
+        // If the previous char is a number
+        if (!isNaN(strDisplay.charAt(strDisplay.length - 1))) {
+          strDisplay += operator;
+        }
+        // If the previous char is an operator and needs to be updated 
+        else {
+          strDisplay = strDisplay.substring(0, strDisplay.length - 1);
+          strDisplay += operator;
+        }
+      }
+
       display.innerHTML = strDisplay;
-      console.log(strDisplay);
     })
   })
 }
@@ -72,7 +87,33 @@ function setSpecialOperatorsListeners() {
   document.querySelector('.clear').addEventListener('click', event => {
     display.innerHTML = "Enter operation..."
     strDisplay = "";
-  })
+  });
+
+  document.querySelector('.equal').addEventListener('click', event => {
+    let strNumber = "";
+    let tempNumber = null;
+    let operator = "";
+    let answer = 0;
+    for (let i = 0; i < strDisplay.length + 1; i++) {
+      if ((!isNaN(strDisplay.charAt(i)) || strDisplay.charAt(i) == '.') && i != strDisplay.length) {
+        strNumber += strDisplay.charAt(i);
+      } else {
+        if (tempNumber == null) {
+          tempNumber = parseInt(strNumber);
+          strNumber = "";
+        } else {
+          answer = answer + operate(tempNumber,
+            parseInt(strNumber),
+            operator);
+          computed = true;
+        }
+        operator = strDisplay.charAt(i);
+      }
+    }
+
+    display.innerHTML = answer;
+    strDisplay = "";
+  });
 }
 
 setNumberListener();
