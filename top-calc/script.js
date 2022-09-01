@@ -51,7 +51,7 @@ let computed = false;
 function setNumberListener() {
   document.querySelectorAll('.digit').forEach(item => {
     item.addEventListener('click', event => {
-      let number = parseInt(item.innerHTML);
+      let number = parseFloat(item.innerHTML);
       strDisplay += number;
       display.innerHTML = strDisplay;
     })
@@ -66,6 +66,7 @@ function setOperatorsListener() {
       // true if first operation already made
       if (computed) {
         strDisplay = display.innerHTML + operator;
+        computed = false;
       } else {
         // If the previous char is a number
         if (!isNaN(strDisplay.charAt(strDisplay.length - 1))) {
@@ -99,13 +100,15 @@ function setSpecialOperatorsListeners() {
         strNumber += strDisplay.charAt(i);
       } else {
         if (tempNumber == null) {
-          tempNumber = parseInt(strNumber);
+          tempNumber = parseFloat(strNumber);
           strNumber = "";
         } else {
-          answer = answer + operate(tempNumber,
-            parseInt(strNumber),
+          answer = operate(tempNumber,
+            parseFloat(strNumber),
             operator);
           computed = true;
+          strNumber = "";
+          tempNumber = answer;
         }
         operator = strDisplay.charAt(i);
       }
